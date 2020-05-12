@@ -1,6 +1,9 @@
 #!/usr/bin/env groovy
 node {
   stage "Validate parameters"
+  if(params.Project == '')
+    error("Required parameters not specified")
+  echo params.Project
   
   sh "mkdir -p output"
   
