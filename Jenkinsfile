@@ -3,7 +3,7 @@ node {
   stage "Validate parameters"
   if(params.Project == '' || params.Environment == '')
     error("Required parameters not specified")
-  echo params.Project & "  " & params.Environment
+  echo "Project: " + params.Project + " Environment: " + params.Environment
   
   sh "mkdir -p output"
   
